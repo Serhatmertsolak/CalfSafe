@@ -1,9 +1,9 @@
 /* css/style.css */
 
-/* Genel Reset */
+/* General Reset */
 * { box-sizing: border-box; margin:0; padding:0; font-family:'Segoe UI',Tahoma,sans-serif; }
 
-/* Arka Plan */
+/* Background */
 body {
   min-height:100vh;
   background:radial-gradient(circle at top left,#8a2387,#e94057,#f27121);
@@ -79,7 +79,7 @@ header h1 {
 #formContainer button.cancel { background:#e74c3c; }
 #formContainer button.cancel:hover { background:#c0392b; }
 
-/* Defter Listesi */
+/* Ledger List */
 #listContainer .notebook-item {
   display:flex; justify-content:space-between; align-items:center;
   padding:8px; border:1px solid #ccc; border-radius:4px; margin-bottom:8px;
@@ -92,7 +92,7 @@ header h1 {
 #listContainer .notebook-item .delete-btn { background:#e74c3c; }
 #listContainer .notebook-item .delete-btn:hover { background:#c0392b; }
 
-/* Defter İçeriği Görünümü */
+/* Notebook Content View */
 #viewContainer pre {
   white-space:pre-wrap; text-align:left;
   background:#f5f5f5; padding:15px; border-radius:4px; margin-bottom:10px;
