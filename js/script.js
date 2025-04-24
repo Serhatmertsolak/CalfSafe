@@ -1,3 +1,19 @@
+/**
+ * CalcSafe – Calculator Looking Notepad
+ * Copyright (c) 2025 Serhat Mert Solak
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 const secretCode     = ['1','2','3','+','='];
 let inputSequence    = [];
@@ -14,7 +30,7 @@ const formContainer  = document.getElementById('formContainer');
 const listContainer  = document.getElementById('listContainer');
 const viewContainer  = document.getElementById('viewContainer');
 
-// Hesap makinesi tuşları
+// Calculator keys
 buttons.forEach(btn => {
   btn.addEventListener('click', () => {
     const val = btn.dataset.value;
@@ -70,7 +86,7 @@ function setNotebooks(arr) {
   localStorage.setItem('calcSafeNotebooks', JSON.stringify(arr));
 }
 
-// Yeni Defter formu
+// New Ledger formula
 newBtn.addEventListener('click', () => {
   hideAllSections();
   formContainer.innerHTML = '';
@@ -106,7 +122,7 @@ newBtn.addEventListener('click', () => {
   formContainer.append(title, save, cancel, area);
 });
 
-// Defterleri Aç
+// Open Notebooks
 openBtn.addEventListener('click', showList);
 function showList() {
   hideAllSections();
@@ -140,7 +156,7 @@ function showList() {
   });
 }
 
-// Defter Görünümü
+// Ledger View
 function viewNotebook(idx) {
   hideAllSections();
   viewContainer.innerHTML = '';
@@ -160,7 +176,7 @@ function viewNotebook(idx) {
   viewContainer.append(h3, pre, back);
 }
 
-// Çıkış Yap
+// Log Out
 logoutBtn.addEventListener('click', () => {
   secretArea.classList.add('hidden');
   calculator.classList.remove('hidden');
