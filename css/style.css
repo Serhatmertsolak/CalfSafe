@@ -1,0 +1,111 @@
+/* css/style.css */
+
+/* Genel Reset */
+* { box-sizing: border-box; margin:0; padding:0; font-family:'Segoe UI',Tahoma,sans-serif; }
+
+/* Arka Plan */
+body {
+  min-height:100vh;
+  background:radial-gradient(circle at top left,#8a2387,#e94057,#f27121);
+  display:flex; align-items:center; justify-content:center; padding:20px;
+}
+.container { width:100%; max-width:380px; text-align:center; }
+header h1 {
+  color:#fff; margin-bottom:20px; font-size:1.8rem;
+  text-shadow:0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Calculator */
+.calculator {
+  width:100%; border-radius:12px; backdrop-filter:blur(12px);
+  background:rgba(255,255,255,0.15); box-shadow:0 8px 30px rgba(0,0,0,0.2);
+}
+#display {
+  background:rgba(0,0,0,0.7); color:#0f0; text-align:right;
+  padding:20px; font-size:2rem; height:60px; overflow-x:auto;
+}
+.buttons {
+  display:grid; grid-template-columns:repeat(4,1fr);
+}
+.btn {
+  padding:20px; font-size:1.2rem; border:1px solid rgba(255,255,255,0.3);
+  background:rgba(255,255,255,0.8); cursor:pointer;
+  transition:background .2s,transform .1s;
+}
+.btn:hover { background:rgba(255,255,255,1) }
+.btn:active { transform:scale(.95) }
+.operator { background:rgba(240,162,59,0.85); color:#fff; }
+.operator:hover { background:rgba(240,162,59,1); }
+.equal {
+  grid-column:span 4; background:rgba(59,176,240,0.85); color:#fff;
+}
+.equal:hover { background:rgba(59,176,240,1); }
+
+
+.hidden { display:none; }
+.secret {
+  width:100%; margin-top:20px; background:rgba(255,255,255,0.9);
+  border-radius:8px; padding:15px; box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+#controls { margin-bottom:15px; }
+#controls button {
+  padding:10px 20px; margin-right:5px; border:none; border-radius:4px;
+  color:#fff; cursor:pointer; transition:background .2s;
+}
+#newNotebook { background:#8a2387; }
+#newNotebook:hover { background:#e94057; }
+#openNotebooks { background:#3498db; }
+#openNotebooks:hover { background:#2980b9; }
+#logout { background:#e74c3c; }
+#logout:hover { background:#c0392b; }
+
+/* Yeni Defter Form */
+#formContainer input,
+#viewContainer h3,
+#listContainer h3 { width:100%; margin-bottom:10px; }
+#formContainer input.title {
+  padding:8px; font-weight:bold; border:1px solid #aaa; border-radius:4px;
+}
+#formContainer textarea.content {
+  width:100%; height:200px; padding:8px; border:1px solid #aaa;
+  border-radius:4px; resize:none;
+}
+#formContainer button {
+  padding:8px 16px; margin-right:5px; border:none; border-radius:4px;
+  cursor:pointer; color:#fff; transition:background .2s;
+}
+#formContainer button.save { background:#3498db; }
+#formContainer button.save:hover { background:#2980b9; }
+#formContainer button.cancel { background:#e74c3c; }
+#formContainer button.cancel:hover { background:#c0392b; }
+
+/* Defter Listesi */
+#listContainer .notebook-item {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:8px; border:1px solid #ccc; border-radius:4px; margin-bottom:8px;
+}
+#listContainer .notebook-item button {
+  padding:4px 8px; border:none; border-radius:4px; cursor:pointer; color:#fff;
+}
+#listContainer .notebook-item .view-btn { background:#8a2387; }
+#listContainer .notebook-item .view-btn:hover { background:#e94057; }
+#listContainer .notebook-item .delete-btn { background:#e74c3c; }
+#listContainer .notebook-item .delete-btn:hover { background:#c0392b; }
+
+/* Defter İçeriği Görünümü */
+#viewContainer pre {
+  white-space:pre-wrap; text-align:left;
+  background:#f5f5f5; padding:15px; border-radius:4px; margin-bottom:10px;
+}
+#viewContainer button.back {
+  padding:8px 16px; border:none; border-radius:4px;
+  background:#3498db; color:#fff; cursor:pointer;
+}
+#viewContainer button.back:hover { background:#2980b9; }
+
+/* Responsive */
+@media(max-width:480px) {
+  #display { font-size:1.5rem; padding:15px; }
+  .btn { padding:15px; font-size:1rem; }
+  #formContainer textarea { height:150px; }
+}

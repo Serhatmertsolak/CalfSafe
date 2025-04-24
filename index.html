@@ -1,0 +1,64 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calfsace</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Hesap Makinası Görünümlü Not Defteri</h1>
+    </header>
+
+    <!-- Calculator -->
+    <div class="calculator">
+      <div id="display">0</div>
+      <div class="buttons">
+        <button class="btn" data-value="7">7</button>
+        <button class="btn" data-value="8">8</button>
+        <button class="btn" data-value="9">9</button>
+        <button class="btn operator" data-value="/">÷</button>
+        <button class="btn" data-value="4">4</button>
+        <button class="btn" data-value="5">5</button>
+        <button class="btn" data-value="6">6</button>
+        <button class="btn operator" data-value="*">×</button>
+        <button class="btn" data-value="1">1</button>
+        <button class="btn" data-value="2">2</button>
+        <button class="btn" data-value="3">3</button>
+        <button class="btn operator" data-value="-">−</button>
+        <button class="btn" data-value="0">0</button>
+        <button class="btn" data-value=".">.</button>
+        <button class="btn" data-value="C">C</button>
+        <button class="btn operator" data-value="+">+</button>
+        <button class="btn equal" data-value="=">=</button>
+      </div>
+    </div>
+
+    <!-- Secret Notes -->
+    <div id="secret" class="secret hidden">
+      <h2>Secret Notes</h2>
+
+      <!-- Kontroller -->
+      <div id="controls">
+        <button id="newNotebook">Yeni Defter</button>
+        <button id="openNotebooks">Defterleri Aç</button>
+        <button id="logout">Çıkış Yap</button>
+      </div>
+
+      <!-- Form (Yeni Defter) -->
+      <div id="formContainer" class="hidden"></div>
+
+      <!-- Liste (Defterleri Aç) -->
+      <div id="listContainer" class="hidden"></div>
+
+      <!-- Okuma (Defter Açık) -->
+      <div id="viewContainer" class="hidden"></div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
